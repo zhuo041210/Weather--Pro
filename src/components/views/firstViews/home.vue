@@ -1,5 +1,5 @@
 <template>
-    我是home组件！
+    我是我的主页组件！
 </template>
 
 
