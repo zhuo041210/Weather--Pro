@@ -5,16 +5,22 @@ import Home from '../components/views/firstViews/home.vue'
 import TodayWeather from '../components/views/firstViews/todayWeather.vue'
 import RecentWeather from '../components/views/firstViews/recentWeather.vue'
 import DailySoup from '../components/views/firstViews/dailySoup.vue'
+import Login from '../components/login/index.vue'
 
 const routes = [
     {
         path:'/',
+        name:'login',
+        component:Login,
+    },
+    {
+        path:'/index',
         name:'index',
         component:Index,
         children:[
             {
                 path:'',
-                redirect:'/home'
+                redirect:'/index/home'
             },
             {
                 path:'home',
@@ -39,7 +45,6 @@ const routes = [
         ]
     }
 ]
-
 
 export default createRouter({
     history:createWebHistory(),
